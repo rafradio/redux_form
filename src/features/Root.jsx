@@ -1,16 +1,18 @@
+import { useDispatch, useSelector } from 'react-redux';
+import { selectPosts, selectDatas } from '../store/selectors';
 import { Table, Button } from 'rsuite';
 import './rsuitestyles.css';
-import { useDispatch, useSelector } from 'react-redux';
 import '../index.css';
 
 
 const { Column, HeaderCell, Cell } = Table;
 
 export const Root = () => {
+    const dispatch = useDispatch();
+    const datas = useSelector(selectDatas);
     // const tableHeadres = ['Масса слитка, г', 'Цена за 1г, руб', 'Стоимость слитка, руб'];
     const tableHeadres = ['id', 'name', 'test'];
-    let data = [{id: '1',firstName: 'firstName', lastName: 'test'}];
-    // let data = useSelector(selectDataForTable);
+    // let data = [{id: '1',firstName: 'firstName', lastName: 'test'}];
 
     return (
       <>
@@ -54,7 +56,7 @@ export const Root = () => {
         <Table
             height={400}
             width={360}
-            data={data}
+            data={datas}
         >
           <Column width={60} align="center" fixed>
             <HeaderCell>Id</HeaderCell>
