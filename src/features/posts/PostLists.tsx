@@ -1,10 +1,11 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { selectPosts } from '../../store/selectors';
+import { selectPosts, selectDatas } from '../../store/selectors';
 import React from 'react';
 
 export const PostsList = () => {
     const dispatch = useDispatch();
     const posts = useSelector(selectPosts);
+    const datas = useSelector(selectDatas);
 
     const renderedPosts = posts.map(posts => (
         <article className="post-excerpt" key={posts.id}>

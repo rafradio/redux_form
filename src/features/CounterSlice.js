@@ -7,7 +7,8 @@ const initialState = {
     posts: [
         { id: '1', title: 'First Post!', content: 'Hello!' },
         { id: '2', title: 'Second Post', content: 'More text' }
-    ]
+    ],
+    dataTable: [{id: '1',firstName: 'firstName', lastName: 'test'}],
 }
 
 export const counterSlice = createSlice({
