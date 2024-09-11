@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { selectPosts, selectDatas } from '../store/selectors';
+import { selectDatas } from '../store/selectors';
 import { Table, Button } from 'rsuite';
 import './rsuitestyles.css';
 import '../index.css';
